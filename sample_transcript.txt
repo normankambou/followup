@@ -1,53 +1,77 @@
-Meeting: Q2 GTM Strategy Sync
-Date: April 10, 2026
+Meeting: Weekly GTM Sync
+Date: Wednesday, April 15, 2026
 Attendees: Jordan, Marcus, Priya, Diana, Kevin
 
-Jordan: Alright everyone, let's get started. We have a lot to cover today. First up, Marcus can you give us the status on the CRM migration?
+Jordan: Alright let's get into it, we've got a lot today. Marcus, where are we on the Salesforce cleanup?
 
-Marcus: Yeah so the migration is about 60% done. We've hit some data integrity issues with the legacy fields. I need to have a full audit completed and submitted to the engineering team by April 15th, otherwise we risk pushing the go-live date. This is blocking three other teams right now.
+Marcus: So I've been heads down on it. Honestly it's taking longer than expected. I'd say I need until end of next week to get it fully done. There's about 400 duplicate records I need to manually review.
 
-Jordan: That's concerning. What do you need to unblock yourself?
+Jordan: End of next week meaning Friday the 24th?
 
-Marcus: I need Kevin to pull the raw data export from Salesforce by end of day Monday, April 13th. Without that I can't move forward.
+Marcus: Yeah exactly, Friday the 24th. It's tedious work but I'll get it done.
 
-Kevin: Got it, I'll make that my top priority Monday morning. I'll have it to you by noon.
+Jordan: Okay. And the API documentation you owe the product team?
 
-Jordan: Perfect. Diana, what's the update on the new enterprise client onboarding?
+Marcus: Oh yeah that's separate. I can probably knock that out tomorrow morning, shouldn't take more than an hour.
 
-Diana: So Meridian Corp signed last week which is huge. They need a fully customized onboarding deck and a dedicated Slack channel set up before their kickoff call on April 14th. I also need someone to loop in their technical team for an integration scoping call, ideally before April 15th.
+Jordan: Perfect. Priya what's the status on the Q2 campaign?
 
-Jordan: Marcus, can you handle the integration scoping call with Meridian's technical team?
+Priya: So the creative is done and approved by legal finally. I need to brief the media agency by end of day today otherwise we lose our placement. That's a hard deadline, they close at 5pm.
 
-Marcus: Yeah I can do that. I'll reach out to them today and try to get something on the calendar before the 15th.
+Jordan: Get that done as soon as this call ends.
 
-Jordan: Great. Priya, what's the status on the marketing campaign?
+Priya: Already have the doc open. Also I need someone to review the campaign landing page copy before I send it to the agency. It's about a 20 minute job, just needs a fresh set of eyes.
 
-Priya: The spring campaign assets are done but we're waiting on legal approval. I've been chasing legal for two weeks now. Jordan, I need you to escalate this to the legal team's manager by Monday because if we don't get approval by April 14th we're going to miss our launch window entirely. We've already paid for the media placements.
+Jordan: Diana can you take that?
 
-Jordan: Understood, I'll send that email first thing Monday morning. This is critical.
+Diana: Yeah I can do it this afternoon. I have a pretty packed morning — I have a board prep call at 9am, then a vendor review at 11am — but I'm free after lunch, so I'll get to it right after my 1pm.
 
-Priya: Also I need Kevin to set up UTM tracking links for the campaign. The media agency needs those by April 14th or they can't launch the ads.
+Jordan: Perfect so Diana you'll have that done by like 2pm today?
 
-Kevin: No problem, I can have those done Monday. Although I do already have my weekly sync with the data team at 9am on April 13th, but I'll get it done right after.
+Diana: Yeah 2pm today works.
 
-Jordan: Diana, one more thing — we need to update the pricing page on the website before the campaign goes live. Can you coordinate with the web team on that?
+Jordan: Great. Kevin, what's the update on the new client portal?
 
-Diana: Yes I'll reach out to them today. I'm thinking we need that done by April 15th at the latest to give the campaign a clean landing page. Actually I already have a 9am to 10am check-in with the design team on April 14th, so I can bring it up there.
+Kevin: So the dev team hit a blocker yesterday. We need a decision on the authentication method before they can proceed. I need Jordan and Marcus both in a room to hash that out — it's maybe a 30 minute conversation but it's blocking the whole sprint. Can we do that tomorrow morning?
 
-Jordan: Perfect, kill two birds with one stone. Marcus, don't forget you also owe the product team a technical requirements doc for the Q3 roadmap. When can you have that done?
+Jordan: Yeah let's do it first thing tomorrow, 9am.
 
-Marcus: Realistically April 18th. It's important but not as urgent as everything else right now.
+Marcus: Works for me.
 
-Jordan: That works. Now I want to flag something — Kevin, you mentioned the data team sync is at 9am on April 13th, but I also need you to join a client emergency call with Meridian at 9am that same morning. They flagged a critical issue with their current vendor and want to loop us in immediately. This takes priority over the data team sync.
+Kevin: I'll send the invite after this call.
 
-Kevin: Understood. I'll move the data team sync and make sure I'm on that Meridian call.
+Jordan: Kevin also didn't you have something with the finance team?
 
-Jordan: Great. And Priya — I know you have your regular 9am to 10am team standup on April 14th, but I need you to instead prep and present the campaign performance report to the board at 9am that day. The board specifically requested your presence.
+Kevin: Oh right yeah. Finance needs the Q1 revenue reconciliation spreadsheet by next Monday. That's going to take me a few hours — probably half a day honestly. I'll block off Friday afternoon to work on it.
 
-Priya: Got it. I'll let the team know the standup is moving and I'll prepare the board deck.
+Jordan: Good. Diana what's the update on the Meridian onboarding?
 
-Jordan: Perfect. Okay last thing — we need to schedule a full team retrospective for end of month. Kevin can you find a time that works for everyone and send out a calendar invite?
+Diana: So Meridian's kickoff is next Tuesday the 21st at 10am. I still need to finish the onboarding deck — I'd say I'm about 60% done. I need to have it ready the day before so Monday the 20th. Also their IT team needs credentials set up before the kickoff and that's on Kevin.
 
-Kevin: Sure, I'll send a when2meet or just pick a time and send the invite. I'll aim to get that out by April 14th.
+Kevin: Yeah I have that on my list. I can get credentials set up by end of day Friday.
 
-Jordan: Perfect. I think that's everything. Good meeting everyone, lots to do this week. Let's make it happen.
+Jordan: Kevin that's a lot on your plate Friday between the finance spreadsheet and Meridian credentials.
+
+Kevin: I know, I'll make it work. The credentials are maybe 30 minutes so I'll do that in the morning and spend the afternoon on finance.
+
+Jordan: Marcus I also need you to put together a competitive analysis for the board meeting. That's two weeks from today so you have until the 29th. It's a solid research project, probably a full day of work.
+
+Marcus: Got it, I'll plan for it.
+
+Jordan: One more thing — we need to do a team retrospective. Can someone find a time next week that works for everyone? Shouldn't take more than an hour.
+
+Priya: I can handle that. I'll send a poll this afternoon.
+
+Jordan: Perfect. Oh and Priya — the blog post you've been working on, any update?
+
+Priya: Yeah it's basically done. I just need to do a final proofread and then hand it off to the web team to publish. I'd say I'll have it ready by next Wednesday.
+
+Jordan: Great. Last thing — we had a client complaint come in this morning from Thornton Industries. They're frustrated with response times. Kevin I need you to pull their support ticket history and put together a summary for me by end of tomorrow. That's pretty important.
+
+Kevin: Understood, I'll prioritize that. Probably a 45 minute job.
+
+Jordan: Actually Kevin, one more thing I almost forgot. Meridian needs their onboarding checklist sent over first thing next Monday morning April 20th — they specifically asked for it at 9am so their team can review it before the week kicks off. Can you make sure that goes out at 9am sharp on the 20th?
+
+Kevin: Got it, I'll have it ready and send it at 9am on the 20th.
+
+Jordan: Alright that's everything. Good meeting everyone.

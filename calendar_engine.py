@@ -35,7 +35,7 @@ def get_calendar_service():
 
 def next_workday(date: datetime.date, days_ahead: int = 1) -> datetime.date:
     result = date + datetime.timedelta(days=days_ahead)
-    while result.weekday() >= 5:  # Skip Saturday (5) and Sunday (6)
+    while result.weekday() >= 5:
         result += datetime.timedelta(days=1)
     return result
 
@@ -57,7 +57,7 @@ def get_existing_events(service, date: datetime.date) -> list:
         return []
 
 
-def parse_event_time(event: dict, field: str) -> datetime.datetime | None:
+def parse_event_time(event: dict, field: str):
     dt_str = event.get(field, {}).get("dateTime")
     if not dt_str:
         return None
@@ -67,16 +67,14 @@ def parse_event_time(event: dict, field: str) -> datetime.datetime | None:
         return None
 
 
-def get_event_at_time(events: list, target_time: datetime.time, duration_minutes: int = 60) -> dict | None:
+def get_event_at_time(events: list, target_time: datetime.time, duration_minutes: int = 60):
     target_dt = datetime.datetime.combine(datetime.date.today(), target_time)
     target_end = target_dt + datetime.timedelta(minutes=duration_minutes)
     for event in events:
         start_dt = parse_event_time(event, "start")
         end_dt = parse_event_time(event, "end")
         if start_dt and end_dt:
-            start_t = start_dt.time()
-            end_t = end_dt.time()
-            if not (target_end.time() <= start_t or target_time >= end_t):
+            if not (target_end.time() <= start_dt.time() or target_time >= end_dt.time()):
                 return event
     return None
 
@@ -86,7 +84,7 @@ def find_free_slot(
     target_date: datetime.date,
     duration_minutes: int = 60,
     exclude_event_id: str = None
-) -> datetime.time | None:
+):
     busy_slots = []
     for event in existing_events:
         if exclude_event_id and event.get("id") == exclude_event_id:
@@ -231,7 +229,13 @@ def generate_reschedule_options(
     return options[:5]
 
 
-def move_event_to_slot(service, event: dict, new_date: datetime.date, new_time: datetime.time, duration_minutes: int = 60):
+def move_event_to_slot(
+    service,
+    event: dict,
+    new_date: datetime.date,
+    new_time: datetime.time,
+    duration_minutes: int = 60
+):
     try:
         start_dt = datetime.datetime.combine(new_date, new_time)
         end_dt = start_dt + datetime.timedelta(minutes=duration_minutes)
@@ -248,13 +252,20 @@ def move_event_to_slot(service, event: dict, new_date: datetime.date, new_time: 
         return None, str(e)
 
 
-def create_action_item_event(service, task: str, owner: str, target_date: datetime.date, target_time: datetime.time, duration_minutes: int = 60):
+def create_action_item_event(
+    service,
+    task: str,
+    owner: str,
+    target_date: datetime.date,
+    target_time: datetime.time,
+    duration_minutes: int = 60
+):
     try:
         start_dt = datetime.datetime.combine(target_date, target_time)
         end_dt = start_dt + datetime.timedelta(minutes=duration_minutes)
         event = {
             "summary": f"[Action Item] {task}",
-            "description": f"Owner: {owner}\nCreated by Meeting Summarizer",
+            "description": f"Owner: {owner}\nCreated by FollowUp",
             "start": {"dateTime": start_dt.isoformat(), "timeZone": TIMEZONE},
             "end": {"dateTime": end_dt.isoformat(), "timeZone": TIMEZONE},
             "reminders": {
@@ -280,14 +291,19 @@ def create_calendar_event(
     duration_minutes: int = 60
 ):
     service = get_calendar_service()
+    today = datetime.date.today()
 
     if due_date:
         try:
             target_date = datetime.date.fromisoformat(due_date)
         except Exception:
-            target_date = next_workday(datetime.date.today())
+            target_date = next_workday(today)
     else:
-        target_date = next_workday(datetime.date.today())
+        target_date = next_workday(today)
+
+    # If date is in the past, flag it for user to confirm
+    if target_date < today:
+        return None, "past_date", target_date.isoformat()
 
     # Skip weekends
     while target_date.weekday() >= 5:
@@ -305,7 +321,9 @@ def create_calendar_event(
         )
 
         if priority_result["winner"] == "new":
-            is_our_event = "Meeting Summarizer" in conflicting_event.get("description", "")
+            # Always require user confirmation regardless of who created the event
+            is_our_event = "FollowUp" in conflicting_event.get("description", "") or \
+                           "Meeting Summarizer" in conflicting_event.get("description", "")
             reschedule_options = generate_reschedule_options(
                 service, conflicting_event, target_date, priority, duration_minutes
             )
