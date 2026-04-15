@@ -1,0 +1,53 @@
+Meeting: Q2 GTM Strategy Sync
+Date: April 10, 2026
+Attendees: Jordan, Marcus, Priya, Diana, Kevin
+
+Jordan: Alright everyone, let's get started. We have a lot to cover today. First up, Marcus can you give us the status on the CRM migration?
+
+Marcus: Yeah so the migration is about 60% done. We've hit some data integrity issues with the legacy fields. I need to have a full audit completed and submitted to the engineering team by April 15th, otherwise we risk pushing the go-live date. This is blocking three other teams right now.
+
+Jordan: That's concerning. What do you need to unblock yourself?
+
+Marcus: I need Kevin to pull the raw data export from Salesforce by end of day Monday, April 13th. Without that I can't move forward.
+
+Kevin: Got it, I'll make that my top priority Monday morning. I'll have it to you by noon.
+
+Jordan: Perfect. Diana, what's the update on the new enterprise client onboarding?
+
+Diana: So Meridian Corp signed last week which is huge. They need a fully customized onboarding deck and a dedicated Slack channel set up before their kickoff call on April 14th. I also need someone to loop in their technical team for an integration scoping call, ideally before April 15th.
+
+Jordan: Marcus, can you handle the integration scoping call with Meridian's technical team?
+
+Marcus: Yeah I can do that. I'll reach out to them today and try to get something on the calendar before the 15th.
+
+Jordan: Great. Priya, what's the status on the marketing campaign?
+
+Priya: The spring campaign assets are done but we're waiting on legal approval. I've been chasing legal for two weeks now. Jordan, I need you to escalate this to the legal team's manager by Monday because if we don't get approval by April 14th we're going to miss our launch window entirely. We've already paid for the media placements.
+
+Jordan: Understood, I'll send that email first thing Monday morning. This is critical.
+
+Priya: Also I need Kevin to set up UTM tracking links for the campaign. The media agency needs those by April 14th or they can't launch the ads.
+
+Kevin: No problem, I can have those done Monday. Although I do already have my weekly sync with the data team at 9am on April 13th, but I'll get it done right after.
+
+Jordan: Diana, one more thing — we need to update the pricing page on the website before the campaign goes live. Can you coordinate with the web team on that?
+
+Diana: Yes I'll reach out to them today. I'm thinking we need that done by April 15th at the latest to give the campaign a clean landing page. Actually I already have a 9am to 10am check-in with the design team on April 14th, so I can bring it up there.
+
+Jordan: Perfect, kill two birds with one stone. Marcus, don't forget you also owe the product team a technical requirements doc for the Q3 roadmap. When can you have that done?
+
+Marcus: Realistically April 18th. It's important but not as urgent as everything else right now.
+
+Jordan: That works. Now I want to flag something — Kevin, you mentioned the data team sync is at 9am on April 13th, but I also need you to join a client emergency call with Meridian at 9am that same morning. They flagged a critical issue with their current vendor and want to loop us in immediately. This takes priority over the data team sync.
+
+Kevin: Understood. I'll move the data team sync and make sure I'm on that Meridian call.
+
+Jordan: Great. And Priya — I know you have your regular 9am to 10am team standup on April 14th, but I need you to instead prep and present the campaign performance report to the board at 9am that day. The board specifically requested your presence.
+
+Priya: Got it. I'll let the team know the standup is moving and I'll prepare the board deck.
+
+Jordan: Perfect. Okay last thing — we need to schedule a full team retrospective for end of month. Kevin can you find a time that works for everyone and send out a calendar invite?
+
+Kevin: Sure, I'll send a when2meet or just pick a time and send the invite. I'll aim to get that out by April 14th.
+
+Jordan: Perfect. I think that's everything. Good meeting everyone, lots to do this week. Let's make it happen.
